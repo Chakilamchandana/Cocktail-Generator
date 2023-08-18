@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Preahvihear&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href='styles/main.css'>
+    <title>Cocktail Generator</title>
+</head>
+<body>
+    <h1 class="header">Sip, Shake, Surprise: Unleash Your Thirst for Adventure with Every Click!</h1>
+
+    <div class="cocktailImageContainer">
+        <img class="cocktailImage" src="<%= cocktailImage %>" alt="sample Cocktail image"/> 
+        <div class="textOverlay">
+            <p class="instructions"> <%= cocktailInstructions %> </p>
+            <p class="ingredients"> What's in it?
+                <% ingredients.forEach(ingredient => { %>
+                    <p class="ingredient"> <%= ingredient %> </p>
+                <% }) %>
+            </p>
+        </div>
+        
+    </div>
+
+    <p class="name"> <%= cocktailName %> </p>
+    <a href="/">Try another</a>
+
+</body>
+</html>
