@@ -1,4 +1,3 @@
 # Cocktail-Generator
-A web application that generates random cocktails.
-
-This web-based application is designed to enhance the understanding of API calls using a free API - https://www.thecocktaildb.com/api.php. Its primary goal is to harness the power of API endpoints using Axios and the Express.js framework in a Node.js environment.
+This cocktail generator serves the purpose of creating and providing a diverse range of cocktail recipes. 
+It achieves this by utilizing a free API from https://www.thecocktaildb.com/api.php. The generator leverages the capabilities of the axios library and the Express.js framework in a Node.js environment to interact with the API's endpoints. This interaction allows users to access a wide variety of cocktail recipes, thereby enhancing their knowledge of cocktails and facilitating the exploration of new and exciting drink options.
