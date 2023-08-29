@@ -40,9 +40,11 @@ app.get('/', async(req,res) =>{
     } catch(error){
         console.log(error.response.data);
     }
-    
-    
 } )
+
+app.get('/reload', (req,res) =>{
+    res.redirect('/');
+})
 
 app.listen(port,()=>{
     console.log("Server started on the port: ", port);

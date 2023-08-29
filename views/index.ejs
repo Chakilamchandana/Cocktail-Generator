@@ -21,12 +21,18 @@
                     <p class="ingredient"> <%= ingredient %> </p>
                 <% }) %>
             </p>
+            
         </div>
         
     </div>
 
-    <p class="name"> <%= cocktailName %> </p>
-    <a href="/">Try another</a>
+    <p class="name"> <%= cocktailName %> </p> <button id="reloadbtn" onclick="reload()">Try another</button>
+   
+    <script>
+        function reload(){
+            window.location.href = '/reload';
+        }
+    </script>
 
 </body>
 </html>
