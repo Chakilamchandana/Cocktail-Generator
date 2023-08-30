@@ -55,15 +55,12 @@ body{
   height: 100%;
   background-color: rgba(0, 0, 0, 0.759);
   color: #e85d04;
-  display: none;
+  /* display: none; */
   flex-direction: column;
-  justify-content: center;
+  justify-content:flex-start;
   align-items: center;
   opacity: 0;
   transition: opacity 0.8s ease;
-  /* overflow: hidden; */
-  /* padding: 3rem; */
-  /* margin: 3rem; */
 }
 
 /* Show overlay on hover */
@@ -76,14 +73,23 @@ body{
 
 /* Instructions styles */
 .instructions {
-  font-size: 1.5rem;
-  padding: 0.1rem;
-  text-align: center;
+  text-align: justify;
+  font-size: 1rem;
+  padding: 2rem;
+  /* text-align: center; */
+  margin: 2rem 2rem 0.3rem 2rem;
+}
+
+.ingredients {
+  font-size: 1rem;
+  /* padding: 2rem; */
+  margin: 0rem 2rem 2rem 2rem;
 }
 
 .ingredient{
   font-size: 0.9rem;
-  display: list-item ;
+  /* display: list-item; */
+  display: block;
 }
 
 .name{
