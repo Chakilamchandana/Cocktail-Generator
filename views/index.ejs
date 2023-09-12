@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Preahvihear&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href='styles/main.css'>
-    <title>Cocktail Generator</title>
-</head>
-<body>
+<%- include('header') -%>
     <h1 class="header">Sip, Shake, Surprise: Unleash Your Thirst for Adventure with Every Click!</h1>
 
     <div class="cocktailImageContainer">
@@ -26,13 +15,19 @@
         
     </div>
 
-    <p class="name"> <%= cocktailName %> </p> <button id="reloadbtn" onclick="reload()">Try another</button>
+    <p class="name"> <%= cocktailName %> </p> 
+    
+    <div class="container">
+    <a id="reloadbtn" href="/">
+     
+  
+        <div class="dice">
+          <img class="img1 wobble " src=" <%= randomImage1 %> ">
+        </div>
+  
+    </a>
+      </div>
    
-    <script>
-        function reload(){
-            window.location.href = '/reload';
-        }
-    </script>
-
-</body>
-</html>
+    <!-- Roll the die and get a new cocktail -->
+   
+<%- include('footer') -%>

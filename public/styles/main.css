@@ -101,12 +101,48 @@ body{
   font-size: 1.5rem;
 }
 
-#reloadbtn {
-  color: #6b9080;
-  margin-top: 1rem;
-  font-size: 1rem;
-  background-color: #fdcb6e;
-  border-radius: 5px;
-  border: none;
-  font-family: 'Preahvihear', sans-serif;
+.container{
+  margin-top: 3rem;
 }
+
+/* .dice {
+  text-align: center;
+  display: inline-block;
+
+} */
+
+@keyframes wobble {
+  0% {
+      transform: rotate(0deg);
+  }
+  25% {
+      transform: rotate(15deg);
+  }
+  50% {
+      transform: rotate(-15deg);
+  }
+  75% {
+      transform: rotate(30deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}
+
+/* Apply the 'wobble' animation to the 'wobble' class */
+.wobble {
+  animation: wobble 2s ease infinite;
+}
+
+
+.footer{
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer p{
+  font-size: 0.8rem;
+}
+
+
+

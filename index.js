@@ -16,9 +16,15 @@ app.use(express.static('public'))
 
 app.get('/', async(req,res) =>{
 
+    var randomNumber1 = Math.floor(Math.random()*6) + 1;
+    //console.log(randomNumber1);
+
+
+
     try{
         const result = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/random.php');
         const drinkData = result.data.drinks[0];
+        //console.log(drinkData);
 
         const ingredients = [];
 
@@ -30,21 +36,24 @@ app.get('/', async(req,res) =>{
         }
         console.log(drinkData.strInstructions);
         // console.log(result.data);
+
+        const randomImage1 = `/images/dice${randomNumber1}.png`;
+
         res.render("index.ejs", {
             cocktailName: drinkData.strDrink,
             cocktailInstructions: drinkData.strInstructions,
             ingredients: ingredients,
-            cocktailImage: drinkData.strDrinkThumb
+            cocktailImage: drinkData.strDrinkThumb,
+            randomImage1: randomImage1,
+
         });
         
     } catch(error){
         console.log(error.response.data);
     }
-} )
+} );
 
-app.get('/reload', (req,res) =>{
-    res.redirect('/');
-})
+
 
 app.listen(port,()=>{
     console.log("Server started on the port: ", port);
